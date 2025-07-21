@@ -13,6 +13,5 @@ body {
 @theme {
   --color-primary: #fe9800;
   --text-xl: 2rem;
-  --text-lg: 1.875rem
-;
+  --text-lg: 1.875rem;
 }

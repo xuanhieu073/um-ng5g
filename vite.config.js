@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import vituum from "vituum";
 import tailwindcss from "@tailwindcss/vite";
+import handlebars from "@vituum/vite-plugin-handlebars";
 
 export default defineConfig(({ command, mode }) => ({
   build: {
@@ -12,5 +13,11 @@ export default defineConfig(({ command, mode }) => ({
       },
     },
   },
-  plugins: [vituum(), tailwindcss()],
+  plugins: [
+    vituum(),
+    handlebars({
+      root: "./src",
+    }),
+    tailwindcss(),
+  ],
 }));
